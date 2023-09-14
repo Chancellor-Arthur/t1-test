@@ -1,6 +1,5 @@
 package ru.svitkin.t1test.task;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +24,7 @@ public class TaskController {
 
 	@PostMapping
 	@Operation(summary = "Подсчёт символов")
-	@ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = LinkedHashMap.class)) })
+	@ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = TaskOutputDto.class)) })
 	public Map<Character, Integer> calculate(@Valid @RequestBody TaskInputDto body) {
 		return taskService.calculate(body.getInput());
 	}
