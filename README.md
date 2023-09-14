@@ -8,6 +8,10 @@
 
 ### `/swagger/api-docs`
 
-## Запуск
+## Запуск приложения
 
 ### `gradlew bootRun`
+
+## Запуск тестов
+
+### `gradlew test`
